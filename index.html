@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apocalypse-Long | 技术小白的 AI 折腾记</title>
+  <meta name="description" content="Apocalypse-Long 的个人主页 - 靠 Antigravity 等 AI 工具折腾一些好玩的小玩意和自用工具。" />
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/61953063?v=4" type="image/x-icon" />
+
+  <!-- Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            dark: {
+              950: '#0a0d14',
+              900: '#0f1420',
+              850: '#151c2c',
+              800: '#1d263b',
+              700: '#2b3650',
+            },
+            fun: {
+              cyan: '#38bdf8',
+              violet: '#a855f7',
+              emerald: '#10b981',
+              amber: '#f59e0b',
+              rose: '#f43f5e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      background-color: #0a0d14;
+      color: #e2e8f0;
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0d14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1d263b;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #38bdf8;
+    }
+    .card {
+      background: rgba(15, 20, 32, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+    }
+    .card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body class="selection:bg-fun-cyan/20 selection:text-fun-cyan min-h-screen flex flex-col justify-between">
+
+  <!-- Navigation -->
+  <header class="border-b border-slate-800/80 bg-dark-950/80 sticky top-0 z-40 backdrop-blur-md">
+    <div class="max-w-4xl mx-auto px-4 h-14 flex items-center justify-between">
+      
+      <a href="#top" class="font-mono text-sm font-semibold tracking-tight text-white flex items-center gap-2 group">
+        <span class="w-7 h-7 rounded-lg bg-fun-cyan/10 text-fun-cyan flex items-center justify-center text-xs group-hover:scale-105 transition-transform">
+          🤖
+        </span>
+        <span>Apocalypse-Long</span>
+      </a>
+
+      <div class="flex items-center gap-3 text-xs font-mono">
+        <button onclick="openProfileModal()" class="px-2.5 py-1 rounded-md bg-fun-cyan/10 text-fun-cyan border border-fun-cyan/30 hover:bg-fun-cyan/20 transition-all flex items-center gap-1.5">
+          <i data-lucide="file-code" class="w-3.5 h-3.5"></i>
+          <span>Profile README</span>
+        </button>
+
+        <a href="https://github.com/Apocalypse-Long" target="_blank" rel="noopener" class="p-1.5 rounded-md hover:bg-slate-800 text-slate-400 hover:text-white transition-colors" title="GitHub">
+          <i data-lucide="github" class="w-4 h-4"></i>
+        </a>
+        <a href="https://aplong.space" target="_blank" rel="noopener" class="p-1.5 rounded-md hover:bg-slate-800 text-slate-400 hover:text-white transition-colors" title="aplong.space">
+          <i data-lucide="globe" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="top" class="max-w-4xl mx-auto px-4 py-12 space-y-12 flex-1 w-full">
+
+    <!-- Hero Section -->
+    <section class="space-y-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fun-cyan/10 border border-fun-cyan/20 text-xs font-mono text-fun-cyan">
+        <span>✨ Powered by Antigravity & AI</span>
+      </div>
+
+      <div class="flex flex-col sm:flex-row sm:items-center gap-5 pt-1">
+        <img src="https://avatars.githubusercontent.com/u/61953063?v=4" alt="avatar" class="w-16 h-16 rounded-2xl border-2 border-slate-700/80 bg-dark-900 object-cover shadow-lg" />
+        <div class="space-y-1">
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            技术小白的 AI 折腾记 🧸
+          </h1>
+          <p class="text-slate-400 text-sm leading-relaxed max-w-xl">
+            Hi，我是 <strong>Apocalypse-Long</strong>。其实我是个技术小白，不太懂高深的底层代码，平时全靠 <strong>Antigravity</strong> 等 AI 工具当外脑，折腾一些自用好玩的小玩意。
+          </p>
+        </div>
+      </div>
+
+      <!-- Fun tags -->
+      <div class="flex flex-wrap gap-2 text-xs font-mono text-slate-400 pt-2">
+        <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800">#AI协助折腾</span>
+        <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800">#香蕉派软路由</span>
+        <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800">#自用分流规则</span>
+        <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800">#拓竹3D打印</span>
+        <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800">#智能家居</span>
+        <span class="px-2.5 py-1 rounded-md bg-dark-850 border border-slate-800">#想到什么试什么</span>
+      </div>
+    </section>
+
+    <!-- My Tinkering Projects (Cards) -->
+    <section class="space-y-4">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+        <h2 class="text-sm font-mono font-semibold text-slate-200 uppercase tracking-wider flex items-center gap-2">
+          <span>🎮</span> 我折腾的小玩意
+        </h2>
+        <span class="text-xs font-mono text-slate-500">自用备忘与分享</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- 1. bpi-r4-builder -->
+        <div class="card rounded-xl p-5 space-y-3 transition-all">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-base">🚀</span>
+              <a href="https://github.com/Apocalypse-Long/bpi-r4-builder" target="_blank" class="font-bold text-white hover:text-fun-cyan transition-colors text-sm">
+                bpi-r4-builder
+              </a>
+            </div>
+            <a href="https://github.com/Apocalypse-Long/bpi-r4-builder" target="_blank" class="text-xs font-mono text-slate-400 hover:text-white">
+              GitHub ↗
+            </a>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            靠 AI 一步步提示调配出来的香蕉派 BPI-R4 软路由纯有线自用固件，跑在自家的弱电箱主路由上，双万兆光口很省心。
+          </p>
+          <div class="text-[11px] font-mono text-fun-cyan/90 bg-fun-cyan/5 px-2.5 py-1 rounded border border-fun-cyan/15">
+            💡 AI 指导编译 • 开箱即用
+          </div>
+        </div>
+
+        <!-- 2. clash (ApClash) -->
+        <div class="card rounded-xl p-5 space-y-3 transition-all">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-base">⚡</span>
+              <a href="https://github.com/Apocalypse-Long/clash" target="_blank" class="font-bold text-white hover:text-fun-amber transition-colors text-sm">
+                clash (ApClash)
+              </a>
+            </div>
+            <a href="https://github.com/Apocalypse-Long/clash" target="_blank" class="text-xs font-mono text-slate-400 hover:text-white">
+              GitHub ↗
+            </a>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            平常自己用的网络分流规则与 Subconverter 远程转换配置，AI 帮我把各种国内外规则和测速分流理得明明白白。
+          </p>
+          <div class="text-[11px] font-mono text-fun-amber/90 bg-fun-amber/5 px-2.5 py-1 rounded border border-fun-amber/15">
+            💡 懒人自用配置 • 自动同步
+          </div>
+        </div>
+
+        <!-- 3. docker_image_pusher -->
+        <div class="card rounded-xl p-5 space-y-3 transition-all">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-base">📦</span>
+              <a href="https://github.com/Apocalypse-Long/docker_image_pusher" target="_blank" class="font-bold text-white hover:text-fun-emerald transition-colors text-sm">
+                docker_image_pusher
+              </a>
+            </div>
+            <a href="https://github.com/Apocalypse-Long/docker_image_pusher" target="_blank" class="text-xs font-mono text-slate-400 hover:text-white">
+              GitHub ↗
+            </a>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            国外 Docker 镜像拉不动时随手做的小工具，借用 GitHub Actions 把镜像搬运到国内阿里云私有仓备用。
+          </p>
+          <div class="text-[11px] font-mono text-fun-emerald/90 bg-fun-emerald/5 px-2.5 py-1 rounded border border-fun-emerald/15">
+            💡 解决拉取超时 • 简单好用
+          </div>
+        </div>
+
+        <!-- 4. 日常自动化小脚本 -->
+        <div class="card rounded-xl p-5 space-y-3 transition-all">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-base">🛠️</span>
+              <span class="font-bold text-white text-sm">
+                日常自用小脚本群
+              </span>
+            </div>
+            <span class="text-xs font-mono text-slate-500">Local Tools</span>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            写在本地的一堆零碎 Python 脚本，平时用来自动化跑分测速、测节点连通性、流量监控以及做配置热更新。
+          </p>
+          <div class="text-[11px] font-mono text-fun-violet/90 bg-fun-violet/5 px-2.5 py-1 rounded border border-fun-violet/15">
+            💡 让 AI 写的各种自动化小助手
+          </div>
+        </div>
+
+        <!-- 5. 拓竹 3D 打印 & 智能家居 -->
+        <div class="card rounded-xl p-5 space-y-3 transition-all md:col-span-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-base">🖨️</span>
+              <a href="https://aplong.space" target="_blank" class="font-bold text-white hover:text-fun-cyan transition-colors text-sm">
+                生活与玩具（3D 打印 & aplong.space）
+              </a>
+            </div>
+            <a href="https://aplong.space" target="_blank" class="text-xs font-mono text-slate-400 hover:text-white">
+              aplong.space ↗
+            </a>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            除了折腾网络，平时还爱玩拓竹 (Bambu Lab) 3D 打印小零件、搞 Home Assistant 智能家居联动，并把自用的小服务挂在 aplong.space 上。
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- My Vibe / 折腾心态 -->
+    <section class="space-y-4">
+      <div class="border-b border-slate-800 pb-2">
+        <h2 class="text-sm font-mono font-semibold text-slate-200 uppercase tracking-wider flex items-center gap-2">
+          <span>💡</span> 折腾心得
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+        <div class="card rounded-xl p-4 space-y-1.5">
+          <div class="font-bold text-white flex items-center gap-1.5">
+            <span>🤖</span> AI 是超级搭档
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            不懂语法、看不懂报错都没事，把需求喂给 Antigravity，它就能陪我把脑洞一步步做出来。
+          </p>
+        </div>
+
+        <div class="card rounded-xl p-4 space-y-1.5">
+          <div class="font-bold text-white flex items-center gap-1.5">
+            <span>🎯</span> 自用好用就行
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            不追求多高深的大架构，只要能解决家里网络卡顿、下载慢或者让生活更方便，折腾就值了。
+          </p>
+        </div>
+
+        <div class="card rounded-xl p-4 space-y-1.5">
+          <div class="font-bold text-white flex items-center gap-1.5">
+            <span>🎉</span> 过程最开心
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            从软路由刷机、测速分流到打印个收纳盒，享受把模糊想法变出实物的全过程！
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- GitHub Profile README Copy Modal -->
+  <div id="profile-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="card bg-dark-950 rounded-2xl max-w-xl w-full max-h-[85vh] flex flex-col border border-slate-800 shadow-2xl overflow-hidden font-mono text-xs">
+      
+      <div class="p-4 border-b border-slate-800 flex items-center justify-between">
+        <div class="flex items-center gap-2 text-white">
+          <i data-lucide="github" class="w-4 h-4 text-fun-cyan"></i>
+          <span>GitHub Profile README 预览</span>
+        </div>
+        <button onclick="closeProfileModal()" class="text-slate-400 hover:text-white">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="p-4 overflow-y-auto flex-1 bg-dark-900">
+        <p class="text-slate-400 mb-2 text-[11px]">
+          提交到你的同名仓库 <code>Apocalypse-Long/Apocalypse-Long</code> 的 <code>README.md</code> 即可在 GitHub 首页展示。
+        </p>
+        <textarea id="profile-code" readonly class="w-full h-72 p-3 rounded-lg bg-dark-950 border border-slate-800 text-slate-300 font-mono text-xs resize-none focus:outline-none"></textarea>
+      </div>
+
+      <div class="p-3 border-t border-slate-800 flex items-center justify-between">
+        <span id="copy-status" class="text-fun-emerald text-xs"></span>
+        <div class="flex gap-2">
+          <button onclick="closeProfileModal()" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-300 hover:text-white">
+            关闭
+          </button>
+          <button onclick="copyProfileCode()" class="px-3 py-1.5 rounded-lg bg-fun-cyan hover:bg-sky-300 text-dark-950 font-semibold flex items-center gap-1.5">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            一键复制 Markdown
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-dark-950 py-6 text-xs font-mono text-slate-500">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div>
+        <span>Apocalypse-Long</span> • <span>Made with AI & Curiosity</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/Apocalypse-Long" target="_blank" class="hover:text-slate-300">GitHub</a>
+        <a href="https://aplong.space" target="_blank" class="hover:text-slate-300">aplong.space</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const markdownTemplate = `<div align="center">
+
+# 👋 Hi, I'm Apocalypse-Long!
+
+<p align="center">
+  <i>技术小白一枚，喜欢靠 Antigravity 等 AI 伙伴折腾一些自用的小玩意。</i>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Vibe-Curious%20%26%20Tinkering-38bdf8?style=flat-square" alt="Tinkering" />
+  <img src="https://img.shields.io/badge/Powered%20by-Antigravity%20%26%20AI-a855f7?style=flat-square" alt="AI Powered" />
+  <img src="https://img.shields.io/badge/Homelab-aplong.space-10b981?style=flat-square" alt="Site" />
+</p>
+
+</div>
+
+---
+
+### 🧸 我用 AI 折腾的一些小玩意
+
+- 🚀 [**bpi-r4-builder**](https://github.com/Apocalypse-Long/bpi-r4-builder) — 靠 AI 一步步调教出来的香蕉派 BPI-R4 纯有线软路由自用固件。
+- ⚡ [**clash (ApClash)**](https://github.com/Apocalypse-Long/clash) — 平常自己用的分流规则与远程转换配置，开箱即用。
+- 📦 [**docker_image_pusher**](https://github.com/Apocalypse-Long/docker_image_pusher) — 用 GitHub Actions 转存海外 Docker 镜像到阿里云的小工具。
+- 🛠️ **日常自用脚本** — 各种测速、网络状态监测和自动化小工具。
+- 🖨️ **生活与玩具** — 跑在 [aplong.space](https://aplong.space) 上的小服务，还有拓竹 3D 打印与智能家居联动。
+
+---
+
+### 🤖 关于我
+
+- 💻 **纯粹的技术小白**：不懂高深复杂的底层，全靠向 AI 提问和让 AI 写代码。
+- 💡 **脑洞行动派**：想到什么好玩的就让 Antigravity 帮我实现，享受把想法折腾落地的快乐。
+- 🌐 **随手记录**：主页与代码主要供自己备忘，如果刚好帮到你那就太棒了！
+
+---
+
+<div align="center">
+  <p><sub>GitHub: <a href="https://github.com/Apocalypse-Long">@Apocalypse-Long</a> • 空间: <a href="https://aplong.space">aplong.space</a></sub></p>
+</div>`;
+
+    document.getElementById('profile-code').value = markdownTemplate;
+
+    function openProfileModal() {
+      document.getElementById('profile-modal').classList.remove('hidden');
+    }
+    function closeProfileModal() {
+      document.getElementById('profile-modal').classList.add('hidden');
+    }
+    function copyProfileCode() {
+      const copyText = document.getElementById("profile-code");
+      copyText.select();
+      navigator.clipboard.writeText(copyText.value).then(() => {
+        const status = document.getElementById('copy-status');
+        status.innerText = "✓ 已成功复制到剪贴板！";
+        setTimeout(() => { status.innerText = ""; }, 2500);
+      });
+    }
+
+    lucide.createIcons();
+  </script>
+</body>
+</html>
