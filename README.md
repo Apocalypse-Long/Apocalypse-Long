@@ -3,7 +3,7 @@
 # 👋 Hi, I'm Apocalypse-Long!
 
 <p align="center">
-  <i>技术小白一枚，喜欢靠 Antigravity 等 AI 伙伴折腾一些自用的小玩意。</i>
+  <i>技术小白一枚，喜欢靠 AI 伙伴折腾一些自用的小玩意。</i>
 </p>
 
 <p align="center">
